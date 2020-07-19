@@ -1,5 +1,6 @@
 # https://aws.amazon.com/cn/releasenotes/available-deep-learning-containers-images/
-FROM 763104351884.dkr.ecr.us-west-2.amazonaws.com/tensorflow-training:1.15.2-cpu-py36-ubuntu18.04
+# FROM 763104351884.dkr.ecr.us-west-2.amazonaws.com/tensorflow-training:1.15.2-cpu-py36-ubuntu18.04
+FROM 727897471807.dkr.ecr.cn-north-1.amazonaws.com.cn/tensorflow-training:1.15.2-cpu-py36-ubuntu18.04
 
 RUN apt-get -y update && apt-get install -y --no-install-recommends \
          wget \
@@ -64,6 +65,4 @@ RUN ./configure \
 #     && make && make install
 
 # ENV PYTHONUNBUFFERED=TRUE
-# ENTRYPOINT ["python3"]
-
 ENTRYPOINT ["python3"]

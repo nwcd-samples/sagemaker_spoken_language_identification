@@ -1,5 +1,5 @@
 from . import common
-
+import os
 
 class SuffixRemover:
     def __init__(self, input_files_key, suffixes):

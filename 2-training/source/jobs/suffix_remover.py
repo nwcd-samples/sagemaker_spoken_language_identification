@@ -1,4 +1,5 @@
 from . import common
+import os
 
 
 class SuffixRemover:

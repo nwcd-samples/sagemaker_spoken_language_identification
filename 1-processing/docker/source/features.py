@@ -142,6 +142,7 @@ def process_audio(input_dir, output_dir,  debug=False):
         fb = generate_fb_and_mfcc(signal, sample_rate)
         fb = fb.astype(DATA_TYPE, copy=False)
 
+        #print('fb.shape :  ', fb.shape)
         if not fb.shape[0] == WIDTH:
             print('[warning] ============={} {} '.format(file, fb.shape ))
             continue

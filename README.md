@@ -24,6 +24,8 @@
 
 ### 第一步：数据预处理
 
+[Demo 数据下载](https://dikers-data.s3.cn-northwest-1.amazonaws.com.cn/dataset/spoken_mini_data.zip)
+
 执行 1-processing 下的 processing.ipynb
 
 ### 第二步：模型训练

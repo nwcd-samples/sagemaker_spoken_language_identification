@@ -8,6 +8,7 @@ INPUT_SHAPE = (FB_HEIGHT, WIDTH, COLOR_DEPTH)
 DATA_TYPE = 'float32'
 DATA_KEY = 'data'
 
+# 语言分类
 # LANGUAGES = ['en', 'de', 'es']
 
 LANGUAGE_INDEX = 0

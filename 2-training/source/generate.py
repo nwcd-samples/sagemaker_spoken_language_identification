@@ -28,6 +28,7 @@ TRAIN_DURATION_IN_SEC = 5 * 60
 TEST_DURATION_IN_SEC = 15 * 60
 
 
+# 把语音进行分段， 加噪音， 正则化， 加快或者减慢速度等操作， 生成更多的训练数据。
 def main(input_dir):
 
     pipeline = Pipeline(jobs=[

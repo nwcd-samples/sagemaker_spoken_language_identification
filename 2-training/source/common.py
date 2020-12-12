@@ -91,6 +91,7 @@ def build_label_binarizer(input_dir):
     return label_binarizer, clazzes
 
 
+# 生成训练数据
 def train_generator(input_dir, input_shape):
     label_binarizer, clazzes = build_label_binarizer(input_dir)
 

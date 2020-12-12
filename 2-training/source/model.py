@@ -70,6 +70,8 @@ import folds
 import common
 
 
+# 卷积神经网络
+# 使用keras 搭建卷积神经网络  https://zhuanlan.zhihu.com/p/53790130
 def build_model(input_shape, language_list):
         
     model = Sequential()

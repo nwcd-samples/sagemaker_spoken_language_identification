@@ -9,6 +9,12 @@ from constants import *
 import common
 import shutil
 
+# Filter Bank 介绍   
+#  1. https://blog.csdn.net/book_bbyuan/article/details/80366196
+#  2. https://zhuanlan.zhihu.com/p/147386972
+#
+
+
 def generate_fb_and_mfcc(signal, sample_rate):
 
     # Pre-Emphasis
@@ -138,7 +144,7 @@ def process_audio(input_dir, output_dir,  debug=False):
         signal, sample_rate = sf.read(file)
         assert len(signal) > 0
         assert sample_rate == 22050
-
+        # 生成Filter Bank 数据
         fb = generate_fb_and_mfcc(signal, sample_rate)
         fb = fb.astype(DATA_TYPE, copy=False)
 
@@ -154,6 +160,7 @@ def process_audio(input_dir, output_dir,  debug=False):
         file_without_ext = os.path.join(output_dir, os.path.splitext(file)[0].split('/')[-1])
         np.savez_compressed(file_without_ext + '.fb', data=fb)
 
+        # 将声音文件写成图片， 便于可视化
         if debug:
             end = time.time()
             print("It took [s]: ", end - start)
